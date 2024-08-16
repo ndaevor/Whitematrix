@@ -1,0 +1,253 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFBE6 ;
+    color: #333;
+}
+
+header {
+    background-color:#77E4C8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #357abd;
+    color: white;
+}
+.lgt{
+    background-color: white;
+    text-align: center;
+}
+.lgt a{
+    color: #357abd;
+}
+
+footer {
+    background-color: #77E4C8;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    padding-left: 60px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+form input, form select, form textarea {
+    width: calc(100% - 32px); /* Adjusted for padding and border */
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #357abd;
+    transform: scale(1.02);
+}
+.adminhead{
+    text-align: center;
+}
+
+/* Grievance List */
+#admin-grievances-container .grievance-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#grievances-container .item{
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+.grievance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grievance-header h3 {
+    margin: 0;
+}
+
+.status-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.status-icon.in-progress {
+    background-color: #f39c12;
+}
+
+.status-icon.resolved {
+    background-color: #2ecc71;
+}
+
+.admin-panel {
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 16px;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .admin-panel {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

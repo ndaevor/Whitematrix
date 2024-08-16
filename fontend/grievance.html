@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Grievance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Submit Grievance</h1>
+        <nav>
+            <a href="home.html">Home</a> 
+            <!-- <a href="my-grievances.html">My Grievances</a>  -->
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <form id="grievance-form" enctype="multipart/form-data">
+            <label for="type">Grievance Type:</label>
+            <select id="type" name="type" required>
+                <option value="general">General</option>
+                <option value="technical">Technical</option>
+                <option value="billing">Billing</option>
+            </select>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="supportingDoc">Supporting Documents:</label>
+            <input type="file" id="supportingDoc" name="supportingDoc">
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Grievance Portal</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
