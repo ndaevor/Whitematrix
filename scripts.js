@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password').value;
     
             try {
-                const response = await fetch('http://localhost:5500/api/users/login', {
+                const response = await fetch('http://localhost:5000/api/users/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password })
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch('http://localhost:5000/api/users/register', {
+                const response = await fetch('http://localhost:10000/api/users/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, password })
