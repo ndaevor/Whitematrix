@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        fetch('http://localhost:5000/api/users/me', {
+        fetch('https://whitematrix-1.onrender.com/api/users/me', {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(response => {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const response = await fetch('http://localhost:5000/api/grievances/submit', {
+                const response = await fetch('https://whitematrix-1.onrender.com/api/grievances/submit', {
                     method: 'POST',
                     headers: { 'Authorization': `Bearer ${token}` },
                     body: formData
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        fetch('http://localhost:5000/api/grievances/my-grievances', {
+        fetch('https://whitematrix-1.onrender.com/api/grievances/my-grievances', {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(response => {
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${grievance.type}</h3>
                     <p>${grievance.description}</p>
                     <p class="status">Status: ${grievance.status}</p>
-                    ${grievance.supportingDoc ? `<a href="http://localhost:5000/api/grievances/file/${grievance._id}" target="_blank">View Document</a>` : '<p>No supporting document</p>'}
+                    ${grievance.supportingDoc ? `<a href="https://whitematrix-1.onrender.com/api/grievances/file/${grievance._id}" target="_blank">View Document</a>` : '<p>No supporting document</p>'}
                 </div>
             `).join('');
         })
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        fetch('http://localhost:5000/api/grievances/admin/all', {
+        fetch('https://whitematrix-1.onrender.com/api/grievances/admin/all', {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(response => {
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${grievance.type}</h3>
                     <p>${grievance.description}</p>
                     <p>Submitted by: ${grievance.user.name}</p>
-                    ${grievance.supportingDoc ? `<a href="http://localhost:5000/api/grievances/file/${grievance._id}" target="_blank">View Document</a>` : '<p>No supporting document</p>'}
+                    ${grievance.supportingDoc ? `<a href="https://whitematrix-1.onrender.com/api/grievances/file/${grievance._id}" target="_blank">View Document</a>` : '<p>No supporting document</p>'}
                 </div>
             `).join('');
         })
