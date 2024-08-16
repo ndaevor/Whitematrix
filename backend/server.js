@@ -9,6 +9,7 @@ const grievanceRoutes = require('./routes/grievanceRoutes');
 require('dotenv').config();
 const { GridFSBucket } = require('mongodb');
 // const adminRoutes = require('./routes/admin');
+const path = require('path');
 
 const app = express();
 let gfs;
@@ -19,6 +20,14 @@ app.use(bodyParser.json());
 app.use('/api/users', userRoutes);
 app.use('/api/grievances', grievanceRoutes);
 // app.use('/api/admin', adminRoutes);
+
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname, '..')));
+
+// Redirect root to index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
 
 
 // Connect to MongoDB
