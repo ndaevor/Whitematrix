@@ -189,3 +189,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('supportingDoc');
+    const fileList = document.getElementById('file-list');
+
+    fileInput.addEventListener('change', function() {
+        fileList.innerHTML = ''; // Clear any previous file entries
+
+        const file = fileInput.files[0];
+        if (file) {
+            const fileItem = document.createElement('div');
+            fileItem.textContent = file.name;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.type = 'button'; // Prevent the form from submitting
+            deleteButton.addEventListener('click', function() {
+                fileInput.value = ''; // Clear the file input
+                fileList.innerHTML = ''; // Remove the file name display
+            });
+
+            fileItem.appendChild(deleteButton);
+            fileList.appendChild(fileItem);
+        }
+    });
+});
+
