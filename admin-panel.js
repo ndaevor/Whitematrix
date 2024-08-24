@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        fetch('https://whitematrix-1.onrender.com/api/grievances/admin/all', {
+        fetch('https://whitematrix.onrender.com/api/grievances/admin/all', {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(response => {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <p>${grievance.description}</p>
                     <p>Submitted by: ${grievance.user.name}</p>
-                    ${grievance.supportingDoc ? `<a href="https://whitematrix-1.onrender.com/api/grievances/file/${grievance._id}" target="_blank">View Document</a>` : '<p>No supporting document</p>'}
+                    ${grievance.supportingDoc ? `<a href="https://whitematrix.onrender.com/api/grievances/file/${grievance._id}" target="_blank">View Document</a>` : '<p>No supporting document</p>'}
                     <label for="status-select-${grievance._id}">Status:</label>
                     <select id="status-select-${grievance._id}" class="status-select" data-id="${grievance._id}">
                         <option value="Pending" ${grievance.status === 'Pending' ? 'selected' : ''}>Pending</option>
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const token = localStorage.getItem('authToken'); // Make sure token is available
     
         try {
-            const response = await fetch(`https://whitematrix-1.onrender.com/api/grievances/${id}`, {
+            const response = await fetch(`https://whitematrix.onrender.com/api/grievances/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
