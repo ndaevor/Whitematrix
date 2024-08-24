@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join('');
         })
         .catch(error => {
-            console.error('Error fetching grievances:', error);
+           
             alert('An error occurred. Please try again.');
         });
     }
