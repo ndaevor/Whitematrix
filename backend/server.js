@@ -16,7 +16,7 @@ let gfs;
 
 // Middleware
 app.use(cors({
-    origin: 'https://your-frontend-domain.com', // replace with your frontend domain
+    origin: 'https://whitematrix-1.onrender.com/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
