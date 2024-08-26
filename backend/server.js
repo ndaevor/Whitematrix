@@ -15,7 +15,11 @@ const app = express();
 let gfs;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://your-frontend-domain.com', // replace with your frontend domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 app.use('/api/users', userRoutes);
 app.use('/api/grievances', grievanceRoutes);
