@@ -15,11 +15,7 @@ const app = express();
 let gfs;
 
 // Middleware
-app.use(cors({
-    origin: 'https://whitematrix-1.onrender.com/',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/users', userRoutes);
 app.use('/api/grievances', grievanceRoutes);
